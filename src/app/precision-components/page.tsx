@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -40,14 +40,6 @@ export default function PrecisionComponentsPage() {
           OEM-contracted under client confidentiality, so components below
           are shown by process and material only.
         </p>
-        <div className="mt-8 flex items-start gap-3 border border-haze/15 bg-plate/40 p-5 max-w-2xl">
-          <ShieldCheck className="mt-0.5 shrink-0 text-brass" size={18} />
-          <p className="text-sm leading-relaxed text-steelLight">
-            Part identities, drawings and client names are withheld under
-            manufacturing agreements. What's shown here reflects real
-            capability, not a product catalogue.
-          </p>
-        </div>
       </section>
 
       <section className="section-pad bg-paper py-24">
