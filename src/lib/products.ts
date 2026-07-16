@@ -132,21 +132,6 @@ export const products: Product[] = [
       { label: "Inspection", value: "Stage-wise, random sampling" },
     ],
   },
-  {
-    slug: "metal-finishing",
-    code: "MF-900",
-    name: "Metal Finishing Services",
-    short: "Zinc, silver, electroless nickel, zincteck and tin plating.",
-    overview:
-      "Full product-finishing service combining in-house plating lines with strategic partner alliances — zinc, silver, electroless nickel, zincteck and tin plating — for corrosion resistance, conductivity or appearance as the application demands.",
-    applications: [
-      "Corrosion protection for fittings and press components",
-      "Surface preparation for painted or coated assemblies",
-    ],
-    specs: [
-      { label: "Processes", value: "Zinc, Silver, Electroless Nickel, Zincteck, Tin" },
-    ],
-  },
 ];
 
 export function getProduct(slug: string) {

@@ -125,9 +125,6 @@ export default async function ProductPage({
                 className="object-cover"
               />
             </div>
-            <p className="mt-3 font-mono text-[11px] text-steel/60">
-              Image shown is illustrative stock photography, not our shipped product.
-            </p>
           </>
         )}
       </section>

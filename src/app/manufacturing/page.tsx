@@ -9,11 +9,9 @@ export const metadata: Metadata = {
 };
 
 const floorPhotos = [
-  { src: "/images/cnc/cnc-1.png", alt: "CNC turning center on the shop floor", caption: "CNC turning center — one of 16 on the floor" },
+  { src: "/images/workshop/workshop-2.png", alt: "Shop floor with operators at work", caption: "Production floor — operators at work" },
   { src: "/images/cnc/cnc-2.png", alt: "CNC lathe, Jyoti DX200", caption: "CNC lathe — recently commissioned" },
-  { src: "/images/cnc/cnc-3.png", alt: "CNC lathe in production", caption: "CNC lathe — recently commissioned" },
   { src: "/images/workshop/workshop-1.png", alt: "Shop floor, full view", caption: "Kakkalur Industrial Estate facility floor" },
-  { src: "/images/workshop/workshop-2.png", alt: "Shop floor, machine row", caption: "Production floor — machine bank" },
   { src: "/images/workshop/workshop-3.png", alt: "Shop floor, technician at machine", caption: "Machine operator at a CNC station" },
 ];
 
@@ -66,7 +64,7 @@ export default function ManufacturingPage() {
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-ink text-balance">
           16 CNC machines, one facility, zero handoffs.
         </h2>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {floorPhotos.map((p) => (
             <figure key={p.src} className="group overflow-hidden border border-steel/15 bg-white">
               <div className="relative aspect-[4/3] overflow-hidden">

@@ -6,20 +6,13 @@ import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/products";
 
-const precisionExtraPhotos = [
-  { src: "/images/precision/part-3.png", alt: "CNC-turned shaft component" },
-  { src: "/images/precision/part-5.png", alt: "CNC-machined fitting component" },
-  { src: "/images/precision/part-9.png", alt: "CNC-turned threaded component" },
-];
-
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Precision CNC components for diesel engines and OEM applications, plus hydraulic hose assemblies, end fittings, adapters, ferrules, flange fittings, stainless steel hoses and metal finishing services.",
+    "Precision CNC components for diesel engines and OEM applications, plus hydraulic hose assemblies, end fittings, adapters, ferrules, flange fittings and stainless steel hoses.",
 };
 
 export default function ProductsPage() {
-  const precision = products.filter((p) => p.slug === "precision-components");
   const hydraulic = products.filter((p) => p.slug !== "precision-components");
 
   return (
@@ -37,51 +30,36 @@ export default function ProductsPage() {
         </p>
       </section>
 
-      {/* PRECISION COMPONENTS */}
+      {/* PRECISION COMPONENTS — visual banner linking to the full gallery */}
       <section className="section-pad bg-ink py-20">
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <div className="eyebrow">Primary Focus</div>
-            <h2 className="mt-3 font-display text-3xl font-bold text-haze">Precision Components</h2>
+        <Link
+          href="/precision-components"
+          className="group grid gap-0 overflow-hidden border border-haze/15 transition-colors hover:border-brass md:grid-cols-[1fr_1.3fr]"
+        >
+          <div className="relative aspect-[4/3] overflow-hidden md:aspect-auto">
+            <Image
+              src="/images/precision/group-1.png"
+              alt="Assortment of CNC-turned precision components"
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
           </div>
-          <Link
-            href="/precision-components"
-            className="font-mono text-xs tracking-widest2 uppercase text-brass hover:underline"
-          >
-            View capability gallery →
-          </Link>
-        </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {precision.map((p) => (
-            <ProductCard key={p.slug} product={p} />
-          ))}
-          {precisionExtraPhotos.map((photo) => (
-            <Link
-              key={photo.src}
-              href="/precision-components"
-              className="group relative aspect-[4/3] overflow-hidden border border-haze/15"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </Link>
-          ))}
-          <Link
-            href="/precision-components"
-            className="group flex flex-col items-start justify-center gap-3 border border-dashed border-haze/25 p-7 transition-colors hover:border-brass"
-          >
-            <span className="font-display text-lg font-semibold text-haze">
-              See the full capability gallery
+          <div className="flex flex-col justify-center gap-4 bg-plate/40 p-8 sm:p-10">
+            <div className="eyebrow">Primary Focus</div>
+            <h2 className="font-display text-3xl font-bold text-haze text-balance">
+              Precision Components for diesel engines and OEM applications.
+            </h2>
+            <p className="max-w-md text-sm leading-relaxed text-steelLight">
+              CNC-turned to drawing tolerance across 16 machines — most of it
+              under client confidentiality. See real production photos in the
+              full capability gallery.
+            </p>
+            <span className="mt-2 inline-flex w-fit items-center gap-2 border border-brass px-5 py-2.5 font-mono text-xs uppercase tracking-widest2 text-brass transition-colors group-hover:bg-brass group-hover:text-ink">
+              View Capability Gallery <ArrowRight size={14} />
             </span>
-            <span className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest2 text-brass">
-              12 production photos <ArrowRight size={14} />
-            </span>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </section>
 
       {/* HYDRAULIC PRODUCTS */}
@@ -95,9 +73,6 @@ export default function ProductsPage() {
             <ProductCard key={p.slug} product={p} />
           ))}
         </div>
-        <p className="mt-6 max-w-xl font-mono text-[11px] text-steel/50">
-          Images shown are illustrative stock photography, not our shipped product.
-        </p>
       </section>
 
       <section className="section-pad bg-paper py-20 text-center">

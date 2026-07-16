@@ -10,13 +10,11 @@ export const productStockImages: Record<string, string> = {
   "hydraulic-adapters":
     "https://images.unsplash.com/photo-1591685625550-c7918f629c46?auto=format&fit=crop&w=800&q=80",
   ferrules:
-    "https://images.unsplash.com/photo-1658574552461-0c4053463544?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1707409464203-df2f21c32b9c?auto=format&fit=crop&w=800&q=80",
   "flange-fittings":
-    "https://images.unsplash.com/photo-1776254648037-cd698c2d8bbd?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1718347791747-35fac02b585e?auto=format&fit=crop&w=800&q=80",
   "stainless-steel-hoses":
     "https://images.unsplash.com/photo-1580901368094-7ffe42cf1438?auto=format&fit=crop&w=800&q=80",
-  "metal-finishing":
-    "https://images.unsplash.com/photo-1637296001294-45587603275b?auto=format&fit=crop&w=800&q=80",
 };
 
 // Real production photos for Precision Components.
