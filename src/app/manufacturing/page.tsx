@@ -64,7 +64,7 @@ export default function ManufacturingPage() {
         <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-ink text-balance">
           16 CNC machines, one facility, zero handoffs.
         </h2>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {floorPhotos.map((p) => (
             <figure key={p.src} className="group overflow-hidden border border-steel/15 bg-white">
               <div className="relative aspect-[4/3] overflow-hidden">
@@ -72,7 +72,7 @@ export default function ManufacturingPage() {
                   src={p.src}
                   alt={p.alt}
                   fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
