@@ -117,26 +117,10 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "hand-primers",
-    code: "HP-700",
-    name: "Hand Primers",
-    short: "Feed-pump primers for manual fuel transfer when the engine is at rest.",
-    overview:
-      "Hand primers screwed into the feed pump above the suction valve, used to draw fuel from tank to injection pump while the engine is at rest. Held in stock in warehouse quantities for fast turnaround, and available in customized sizes.",
-    applications: [
-      "Diesel engine fuel systems",
-      "Off-road and stationary engine service",
-    ],
-    specs: [
-      { label: "Fitment", value: "Above suction valve, feed pump" },
-      { label: "Availability", value: "Ex-stock and custom sizes" },
-    ],
-  },
-  {
     slug: "precision-components",
     code: "PC-800",
     name: "Precision Components",
-    short: "Turned components held to tight tolerance across 10 CNC machines.",
+    short: "Turned components held to tight tolerance across 16 CNC machines.",
     overview:
       "Precision-turned components produced across our CNC lathe fleet to tight dimensional tolerance, supporting hydraulic assembly production and direct OEM component supply.",
     applications: [
@@ -144,7 +128,7 @@ export const products: Product[] = [
       "Hydraulic fitting sub-assemblies",
     ],
     specs: [
-      { label: "Machinery", value: "10 × CNC Lathes" },
+      { label: "Machinery", value: "16 × CNC Lathes" },
       { label: "Inspection", value: "Stage-wise, random sampling" },
     ],
   },

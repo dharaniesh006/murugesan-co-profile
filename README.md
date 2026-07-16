@@ -27,10 +27,9 @@ are: re-add a DB, or point the form at a spreadsheet/CRM webhook.
 
 ## What's intentionally left as a next step
 
-- Product photography (gallery sections show numbered placeholders)
-- Real PDF catalogues behind the "Download Catalogue" buttons
-- Google Maps embed on the Contact page (placeholder div)
-- Certification logos on the Quality page
+- Product photography for the 8 hydraulic/hose product lines (still icon
+  placeholders) — Precision Components now has real photos
+- Certification badge graphics (ISO 9001 etc.) — currently text labels only
 
 ## Getting started
 

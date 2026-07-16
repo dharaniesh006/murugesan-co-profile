@@ -1,14 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { ArrowRight, Gauge, ShieldCheck, Factory, Boxes } from "lucide-react";
-import { HoseDiagram } from "@/components/hose-diagram";
 import { StatPlate } from "@/components/stat-plate";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Hydraulic Hose & Fitting Manufacturer in Chennai, Tamil Nadu",
+  title: "Precision Components & Hydraulic Hose Manufacturer in Chennai, Tamil Nadu",
 };
 
 const industries = [
@@ -25,19 +25,19 @@ export default function HomePage() {
           <div className="animate-rise">
             <div className="eyebrow">Manufacturer · Exporter · Supplier — Est. 2005</div>
             <h1 className="mt-5 font-display text-5xl font-bold leading-[1.05] text-haze text-balance sm:text-6xl lg:text-7xl">
-              Hydraulic circuits, held together to{" "}
-              <span className="text-brass">10,000 PSI.</span>
+              Precision components and hydraulic systems, built to{" "}
+              <span className="text-brass">your specification.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-steelLight">
-              From Tiruvallur, Tamil Nadu, we manufacture hose assemblies, end
-              fittings, adapters and precision components that go straight onto
-              earth movers, cranes, compressors and special-purpose machinery
-              — built, welded and pressure-tested in one facility.
+              From Tiruvallur, Tamil Nadu, we manufacture CNC-turned diesel
+              engine components, hose assemblies, end fittings and adapters —
+              machined, welded and quality-checked in one facility, across
+              16 CNC machines.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button asChild variant="primary">
-                <Link href="/products">
-                  View Products <ArrowRight size={14} />
+                <Link href="/precision-components">
+                  Precision Components <ArrowRight size={14} />
                 </Link>
               </Button>
               <Button asChild variant="outline">
@@ -46,8 +46,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative mx-auto aspect-square w-full max-w-md">
-            <HoseDiagram />
+          <div className="relative mx-auto aspect-[4/3] w-full max-w-lg overflow-hidden border border-haze/15">
+            <Image
+              src="/images/workshop/workshop-1.png"
+              alt="Murugesan & Co. CNC machine shop floor"
+              fill
+              priority
+              sizes="(min-width: 1024px) 45vw, 90vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -56,9 +63,9 @@ export default function HomePage() {
       <section className="bg-gunmetal">
         <div className="section-pad grid grid-cols-2 gap-4 py-10 md:grid-cols-4">
           <StatPlate code="PLATE 01" value="2005" label="In Operation Since" />
-          <StatPlate code="PLATE 02" value="10K PSI" label="Max Working Pressure" />
-          <StatPlate code="PLATE 03" value="16" label="CNC Machines" />
-          <StatPlate code="PLATE 04" value="9" label="Product Lines" />
+          <StatPlate code="PLATE 02" value="16" label="CNC Machines" />
+          <StatPlate code="PLATE 03" value="10K PSI" label="Max Hydraulic Pressure" />
+          <StatPlate code="PLATE 04" value="ISO 9001" label="Certified Quality System" />
         </div>
       </section>
 
@@ -85,13 +92,57 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* PRECISION COMPONENTS SPOTLIGHT */}
+      <section className="section-pad bg-ink py-24">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <div className="eyebrow">Now Our Primary Focus</div>
+            <h2 className="mt-3 font-display text-4xl font-bold text-haze text-balance">
+              Precision components for diesel engines and OEM applications.
+            </h2>
+            <p className="mt-5 max-w-lg text-sm leading-relaxed text-steelLight">
+              Most of this work runs under client confidentiality — so what
+              you'll see is real production capability, shown by process and
+              material rather than part name or client.
+            </p>
+            <div className="mt-8">
+              <Button asChild variant="primary">
+                <Link href="/precision-components">
+                  See the Capability Gallery <ArrowRight size={14} />
+                </Link>
+              </Button>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {[
+              "/images/precision/part-1.png",
+              "/images/precision/part-3.png",
+              "/images/precision/part-5.png",
+              "/images/precision/part-7.png",
+              "/images/precision/part-9.png",
+              "/images/precision/group-1.png",
+            ].map((src) => (
+              <div key={src} className="relative aspect-square overflow-hidden border border-haze/10">
+                <Image
+                  src={src}
+                  alt="CNC-turned precision component"
+                  fill
+                  sizes="(min-width: 640px) 33vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED PRODUCTS */}
       <section className="section-pad bg-haze py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <div className="eyebrow">Product Range</div>
             <h2 className="mt-3 font-display text-4xl font-bold text-ink">
-              Nine product lines, one quality system.
+              Precision components and hydraulic fittings, one quality system.
             </h2>
           </div>
           <Link

@@ -24,18 +24,20 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.murugesanco.com
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Murugesan & Co. | Hydraulic Hose & Fitting Manufacturer, Chennai",
+    default: "Murugesan & Co. | Precision Components & Hydraulic Hose Manufacturer, Chennai",
     template: "%s | Murugesan & Co.",
   },
   description:
-    "Murugesan & Co. manufactures hydraulic hose assemblies, end fittings, adapters, stainless steel hoses and precision components from Tiruvallur, Tamil Nadu, serving earth-moving, mining and industrial machinery OEMs since 2005.",
+    "Murugesan & Co. manufactures precision-turned components for diesel engine OEMs, plus hydraulic hose assemblies, end fittings, adapters and stainless steel hoses, from Tiruvallur, Tamil Nadu, serving OEM, earth-moving, mining and industrial machinery customers since 2005.",
   keywords: [
+    "precision components Tamil Nadu",
+    "CNC turned components manufacturer India",
+    "diesel engine components manufacturer",
     "hydraulic hose manufacturer India",
     "hydraulic hose end fittings",
     "hydraulic hose assembly Chennai",
     "stainless steel hose supplier",
     "flange fittings manufacturer",
-    "precision components Tamil Nadu",
   ],
   authors: [{ name: "Murugesan & Co." }],
   openGraph: {
@@ -43,15 +45,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Murugesan & Co.",
-    title: "Murugesan & Co. | Hydraulic Hose & Fitting Manufacturer",
+    title: "Murugesan & Co. | Precision Components & Hydraulic Hose Manufacturer",
     description:
-      "Manufacturer of hydraulic hose assemblies, end fittings, adapters and precision components, Tiruvallur, Tamil Nadu.",
+      "Manufacturer of precision-turned components for diesel engine OEMs, plus hydraulic hose assemblies, end fittings and adapters, Tiruvallur, Tamil Nadu.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Murugesan & Co. | Hydraulic Hose & Fitting Manufacturer",
+    title: "Murugesan & Co. | Precision Components & Hydraulic Hose Manufacturer",
     description:
-      "Manufacturer of hydraulic hose assemblies, end fittings, adapters and precision components since 2005.",
+      "Manufacturer of precision-turned components for diesel engine OEMs, plus hydraulic hose assemblies, end fittings and adapters, since 2005.",
   },
   robots: { index: true, follow: true },
   alternates: { canonical: siteUrl },
@@ -74,7 +76,7 @@ const orgJsonLd = {
   email: "murugesangroups@hotmail.com",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.murugesanco.com",
   description:
-    "Manufacturer, exporter and supplier of hydraulic hoses, hydraulic hose end fittings, adapters, precision components and metal finishing services.",
+    "Manufacturer, exporter and supplier of precision-turned components for diesel engine OEMs, hydraulic hoses, hydraulic hose end fittings, adapters and metal finishing services.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/about",
     "/products",
+    "/precision-components",
     "/manufacturing",
     "/quality",
     "/industries",

@@ -64,6 +64,7 @@ export function Footer() {
 
       <div className="section-pad flex flex-col gap-2 border-t border-haze/10 py-6 text-xs text-steel sm:flex-row sm:items-center sm:justify-between">
         <span>© {new Date().getFullYear()} Murugesan &amp; Co. All rights reserved.</span>
+        <span className="font-mono tracking-widest2 uppercase">GSTIN: 33AJBPB9910G1ZO</span>
         <span className="font-mono tracking-widest2 uppercase">Manufactured in Tamil Nadu, India</span>
       </div>
     </footer>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Established in 2005, Murugesan & Co. has grown from a Chennai-area hose assembler into a full-line manufacturer of hydraulic fittings, adapters and precision components.",
+    "Established in 2005, Murugesan & Co. has grown from a Chennai-area hose assembler into a manufacturer of precision-turned components for diesel engine OEMs, alongside hydraulic hose assemblies, fittings and adapters.",
 };
 
 const timeline = [
@@ -25,15 +25,16 @@ export default function AboutPage() {
       <section className="bg-ink section-pad py-24">
         <div className="eyebrow">About Murugesan &amp; Co.</div>
         <h1 className="mt-3 max-w-3xl font-display text-5xl font-bold text-haze text-balance">
-          Two decades of hydraulic fittings built to hold pressure, not just to pass inspection.
+          Two decades of components built to hold tolerance, and fittings built to hold pressure.
         </h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-steelLight">
           Established in 2005, Murugesan &amp; Company pioneered the manufacturing,
           wholesale exporting and supplying of hose assemblies and hydraulic
-          pipe fittings from Tamil Nadu. Our range — hydraulic hoses, end
-          fittings, adapters and precision components — is used across earth
-          movers, compressors, plastic molders, cranes and special-purpose
-          machinery nationwide.
+          pipe fittings from Tamil Nadu. Precision-turned components for
+          diesel engine and OEM programs are now our primary manufacturing
+          focus, alongside a full hydraulic range — hoses, end fittings and
+          adapters — used across earth movers, compressors, plastic molders,
+          cranes and special-purpose machinery nationwide.
         </p>
       </section>
 
@@ -41,15 +42,17 @@ export default function AboutPage() {
         <div>
           <div className="eyebrow">Mission</div>
           <p className="mt-4 font-display text-2xl font-semibold text-ink text-balance">
-            Offer durable hydraulic components at cost-effective prices, without
-            compromising the quality check system behind every part.
+            Manufacture precision components and durable hydraulic products at
+            cost-effective prices, without compromising the quality check
+            system behind every part.
           </p>
         </div>
         <div>
           <div className="eyebrow">Vision</div>
           <p className="mt-4 font-display text-2xl font-semibold text-ink text-balance">
-            Remain the manufacturer OEMs specify by name when a fitting has to
-            work the first time, under pressure, in the field.
+            Remain the manufacturer OEMs specify by name — a component held
+            to tolerance, or a fitting that has to work the first time,
+            under pressure, in the field.
           </p>
         </div>
       </section>
@@ -77,21 +80,6 @@ export default function AboutPage() {
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-steel">{t.text}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="section-pad bg-ink py-24">
-        <div className="eyebrow">Leadership</div>
-        <h2 className="mt-3 font-display text-3xl font-bold text-haze">Run by the people who set up the first lathe.</h2>
-        <div className="mt-10 max-w-md border border-haze/15 bg-plate/40 p-8">
-          <div className="h-32 w-32 rounded-full bg-gunmetal" aria-hidden="true" />
-          <div className="mt-6 font-display text-lg font-semibold text-haze">Leadership Team</div>
-          <p className="mt-1 font-mono text-xs uppercase tracking-widest2 text-steelLight">
-            Founders &amp; Directors — Murugesan &amp; Co.
-          </p>
-          <p className="mt-3 text-sm text-steelLight">
-            Profile and photograph placeholder — replace with leadership bios and portraits.
-          </p>
         </div>
       </section>
     </>

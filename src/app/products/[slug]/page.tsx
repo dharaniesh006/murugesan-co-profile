@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Download, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
 import { products, getProduct } from "@/lib/products";
 import { ContactForm } from "@/components/contact-form";
-import { ProductIcon } from "@/components/product-icon";
+import { productStockImages } from "@/lib/product-images";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -59,15 +60,6 @@ export default async function ProductPage({
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-steelLight">
           {product.overview}
         </p>
-        <a
-          href="/documents/murugesan-co-profile-2023.pdf"
-          download
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 border border-haze/30 px-6 py-3 font-mono text-xs uppercase tracking-widest2 text-haze hover:border-brass hover:text-brass"
-        >
-          <Download size={14} /> Download Catalogue (PDF)
-        </a>
       </section>
 
       <section className="section-pad grid gap-14 bg-paper py-20 lg:grid-cols-[1fr_1fr]">
@@ -98,16 +90,46 @@ export default async function ProductPage({
 
       <section className="section-pad bg-haze py-20">
         <div className="eyebrow">Product Gallery</div>
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <div className="col-span-2 row-span-2 sm:col-span-2">
-            <ProductIcon slug={product.slug} size="lg" />
-          </div>
-          <ProductIcon slug={product.slug} size="md" />
-          <ProductIcon slug={product.slug} size="md" />
-        </div>
-        <p className="mt-3 font-mono text-[11px] text-steel/60">
-          Awaiting production photography of {product.name.toLowerCase()} — icon shown as placeholder.
-        </p>
+        {product.slug === "precision-components" ? (
+          <>
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {["part-1", "part-3", "part-5", "part-7"].map((p) => (
+                <div key={p} className="relative aspect-square overflow-hidden border border-steel/15">
+                  <Image
+                    src={`/images/precision/${p}.png`}
+                    alt="CNC-turned precision component"
+                    fill
+                    sizes="(min-width: 640px) 25vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 font-mono text-[11px] text-steel/60">
+              Real production components — part identities and client details withheld under confidentiality.
+              See the full{" "}
+              <Link href="/precision-components" className="text-brass hover:underline">
+                capability gallery
+              </Link>
+              .
+            </p>
+          </>
+        ) : (
+          <>
+            <div className="mt-6 relative aspect-[16/9] max-w-3xl overflow-hidden border border-steel/15">
+              <Image
+                src={productStockImages[product.slug]}
+                alt={product.name}
+                fill
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <p className="mt-3 font-mono text-[11px] text-steel/60">
+              Image shown is illustrative stock photography, not our shipped product.
+            </p>
+          </>
+        )}
       </section>
 
       <section id="enquire" className="section-pad bg-paper py-24">
