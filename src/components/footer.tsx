@@ -20,13 +20,15 @@ export function Footer() {
         <div>
           <div className="eyebrow mb-4">Products</div>
           <ul className="space-y-2 text-sm">
-            {products.slice(0, 6).map((p) => (
-              <li key={p.slug}>
-                <Link href={`/products/${p.slug}`} className="hover:text-brass">
-                  {p.name}
-                </Link>
-              </li>
-            ))}
+            {[...products]
+              .sort((a, b) => (a.slug === "precision-components" ? -1 : b.slug === "precision-components" ? 1 : 0))
+              .map((p) => (
+                <li key={p.slug}>
+                  <Link href={`/products/${p.slug}`} className="hover:text-brass">
+                    {p.name}
+                  </Link>
+                </li>
+              ))}
           </ul>
         </div>
 
